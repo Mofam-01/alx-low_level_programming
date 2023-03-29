@@ -7,12 +7,17 @@
 
 void print_rev(char *s)
 {
-	int i;
-	int count = 0;
+	int l, i;
+	char ch;
 
-	for (i = 0 ; s[i] != '\0' ; i++)
-		count++;
-	for (i = count ; i >= 0 ; i--)
-		_putchar(s[i]);
-	return (count++);
+	/* find string length without null char*/
+	for (l = 0; s[l] != '\0'; ++l)
+		;
+	/*swap the string by looping to half the string*/
+	for (i = 0; i < l / 2; ++i)
+	{
+		ch = s[i];
+		s[i] = s[l - 1 - i]; /*-1 because the array starts from 0*/
+		s[l - 1 - i] = ch;
+	}
 }
