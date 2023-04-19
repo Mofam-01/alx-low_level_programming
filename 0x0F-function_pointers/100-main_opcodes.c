@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * print_opcodes - Prints the opcodes of this program
  * @a: address of main function
@@ -13,13 +14,12 @@ void print_opcodes(char *a, int n)
 	for (i = 0; i < n; i++)
 	{
 		printf("%.2hhx", a[i]);
-		if (i < (n - 1))
-		{
+		if (i < n - 1)
 			printf(" ");
-		}
 	}
-	putchar("\n");
+	_putchar("\n");
 }
+
 /**
  * main - function that prints the opcodes of its own
  * function
