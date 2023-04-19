@@ -20,6 +20,4 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 			n++;
 		}
 	}
-	else
-	return;
 }
